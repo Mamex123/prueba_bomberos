@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block titulo %} Inventario {% endblock %}
+{% block Contenido %}
+
+<style>
+  body {
+    background-color: rgb(172, 215, 222);
+  }
+</style>
+
+<div style="text-align: center;">
+    <img src="/static/images/inventario.jpg" alt="Inventario">
+  </div>
+
+  <div class="mb-3" style="text-align: center;">
+    <div class="mb-3" role="group" aria-label="Basic example">
+      <a href="listado" type="button" class="btn-listado btn btn btn-primary btn-lg">Listar Inventario</a>
+      <a href="crear" class="btn-crear btn btn-primary btn-lg">Crear Artículo</a>
+    </div>
+  </div>
+  </div>
+
+
+{% endblock %}

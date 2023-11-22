@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block titulo %} Inicio {% endblock %}
+
+{% block Contenido %}
+
+<style>
+    body {
+      background-image: url("/static/images/bomberos.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: rgb(238, 238, 238);
+      font-family: Arial, sans-serif;
+    }
+    h1{
+      font-size: px;
+      font-weight: bold;
+    }
+</style>
+
+<!--test de github-->
+
+<div class="container-fluid"><br>
+  <main class="px-4">
+  
+    <h1 >Bomberos Segunda Compañia</h1>
+  
+    {% if request.user.is_authenticated %}
+  
+      <p class="lead">{% if request.user.is_authenticated %}Bienvenido {{ user.username | upper }}, {% endif %}Acaba de Iniciar Sesión </p>
+  
+    {% else %}
+  
+    <p>Como miembro de la Segunda Compañía de Bomberos de Iquique, formar parte de este valiente grupo es un honor y un compromiso que llevamos con orgullo. Nuestra compañía es una parte esencial de la comunidad de Iquique y está compuesta por hombres y mujeres dedicados que están dispuestos a arriesgar sus vidas para proteger a nuestros conciudadanos y sus propiedades</p>
+  
+    <p>Ser un bombero de la Segunda Compañía de Iquique es más que un trabajo; es una vocación. Estamos unidos por el deseo de servir y proteger a nuestra comunidad, y estamos dispuestos a enfrentar cualquier desafío para lograrlo. Somos un equipo, una familia, y siempre estamos listos para responder al llamado de auxilio de nuestra ciudad."</p> 
+  
+    {% endif %}
+  </main>
+  
+</div>
+ <!-- Aquí va el código de la imagen -->
+{% endblock %}

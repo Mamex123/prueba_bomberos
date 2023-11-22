@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo %} Agregar Articulos {% endblock %}
+{% block Contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Editar un Artículo
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Artículo</h4>
+        {% include 'inventario/formulario.html' %}
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

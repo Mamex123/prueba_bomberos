@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block titulo %} Lista Inventario {% endblock %}
+{% block Contenido %}
+<br>
+<div class="container">
+  <h1 class="text-center">Listado del Inventario</h1>
+    <p>
+    <a name="" id="" class="btn btn-success" href="{% url 'crear'%}" role="button">Crear un Articulo</a>
+    </p>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for articulo in articulos %}
+          <tr>
+              <td>{{ articulo.id }}</td>
+              <td>{{ articulo.nombre }}</td>
+              <td>{{ articulo.descripcion }}</td>
+              <td>
+                <img src="{{ articulo.imagen.url }}" height="60" />
+                             
+              
+              </td>
+              <td>
+                  <a name="" id="" class="btn btn-info" href="{% url 'editar' articulo.id %}" role="button">Editar</a>
+                  |
+                  <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' articulo.id %}" role="button">Borrar</a>
+              </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+      </table>
+</div>
+{% endblock %}

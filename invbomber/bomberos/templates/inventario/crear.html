@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %} Agregar Articulos {% endblock %}
+{% block Contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Crear un Artículo
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Artículo</h4>
+        {% include 'inventario/formulario.html' %}
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+
+{% endblock %}
